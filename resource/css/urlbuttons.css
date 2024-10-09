@@ -1,0 +1,72 @@
+.appbtn {
+  padding: 40px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  height: 60%;
+  font-size: 25px;
+}
+
+.appbtn:hover {
+  animation: btnhover 30s ease-in-out 1;
+}
+
+@keyframes btnhover {
+  0% {
+    width: 25%;
+    height: 60%;
+  }
+  1% {
+    width: 27.5%;
+    height: 65%;
+  }
+  100% {
+    width: 27.5%;
+    height: 65%;
+  }
+}
+
+.appbtnimg {
+  height: 100px;
+  width: 100px;
+}
+
+.canvabtn {
+  background-color: #00c4cc;
+  color: white;
+  font-weight: bold;
+}
+
+.outlookbtn {
+  background-color: #3860ff;
+  color: white;
+  font-weight: bold;
+}
+
+.triggerbg2 {
+  position: fixed; /* Sit on top of the page content */
+  display: block;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2690ed; /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: default; /* Add a pointer on hover */
+}
+
+.triggerbg3 {
+  position: fixed; /* Sit on top of the page content */
+  display: block;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3860ff; /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: default; /* Add a pointer on hover */
+}

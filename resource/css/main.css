@@ -1,0 +1,89 @@
+body {
+	margin: 0;
+	font-family: arial;
+	cursor: ;
+}
+
+.spinneroverlay {
+	position: fixed; /* Sit on top of the page content */
+  	display: block;
+  	width: 100%; /* Full width (cover the whole page) */
+  	height: 100%; /* Full height (cover the whole page) */
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	background-color: rgba(255,255,255); /* Black background with opacity */
+  	z-index: 50; /* Specify a stack order in case you're using a different order for other elements */
+  	cursor: default; /* Add a pointer on hover */
+}
+
+.pageblock {
+  position: fixed; /* Sit on top of the page content */
+    display: block;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white; /* Black background with opacity */
+    z-index: 49; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: default; /* Add a pointer on hover */
+    opacity: 0;
+}
+
+.tweenturnoff {
+  animation: tweenpageblock 1s ease 1;
+}
+
+.tweenspinzoom {
+	animation: overlayzoom 0.9s ease 1;
+}
+
+.tweenspinzoomback {
+	animation: overlayzoomback 0.9s ease 1;
+	cursor: progress;
+}
+
+@keyframes overlayzoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+  	opacity: 0;
+  }
+  100% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes tweenpageblock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayzoomback {
+  0% {
+  	transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  75% {
+  	opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.spinnerimg {
+  display: block;
+	left:0;right:0;margin:0 auto;
+	padding-top: 20%;
+	width: 5%;
+}

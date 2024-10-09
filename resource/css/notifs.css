@@ -1,0 +1,67 @@
+.notifcontainer {
+  padding: 1px;
+  padding-left: 15px;
+  margin: 5px;
+  border-radius: 15px;
+  background-color: #66ed5c;
+  color: white;
+  border-style: solid;
+  border-color: #21ba16;
+  font-size: 15px;
+}
+
+.notifcontainer .btn {
+  color: white;
+  border:  none;
+  border-bottom: 1px dotted blue;
+  text-decoration: none;
+  background-color:  inherit;
+  cursor: pointer;
+}
+
+.triggerbg1 {
+  position: fixed; /* Sit on top of the page content */
+    display: block;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff5736; /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: default; /* Add a pointer on hover */
+}
+
+.popuplogo {
+  display: block;
+  left:0;right:0;margin:0 auto;
+  padding-top: 20%;
+}
+
+.setbgwhite {
+  animation: swaptowhite 30s ease-in-out 1;
+}
+
+.setimgwhite {
+  animation: imgtowhite 30s ease-in-out 1;
+}
+
+@keyframes swaptowhite {
+  1% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+
+@keyframes imgtowhite {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
