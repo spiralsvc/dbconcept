@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<link rel="shortcut icon" href="resource/image/favicon.ico"/>
+		<link rel="stylesheet" href="resource/css/main.css"> <!-- GENERAL THEMES -->
+		<link rel="stylesheet" href="resource/css/tabs.css"> <!-- MAINPAGE TABS -->
+		<link rel="stylesheet" href="resource/css/notifs.css"> <!-- NOTIFICATIONS -->
+		<link rel="stylesheet" href="resource/css/urlbuttons.css"> <!-- APP BUTTONS -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="resource/js/tabsys.js"></script>
+		<script src="resource/js/onload.js"></script>
+		<script src="resource/js/winload.js"></script>
+	</head>
+	<body id="body">
+		<div>
+
+			<div class="spinneroverlay" id="spinneroverlay" class="loadspinner">
+				<img class="spinnerimg" src="resource/image/spinner.gif">
+				<br>
+				<center><h3>Loading</h3></center>
+			</div>
+
+			<div class="maincontent" style="display:block;" id="MAINCONTENT">
+				<table>
+		  		<tr>
+		    		<th>
+		    			<img src="resource/image/homebanner.png">
+		    		</th>
+		    		<th>
+		    			<h1 style="text-align:right;">Dashboard</h1>
+		    		</th>
+		    	</tr>
+		    	</table>
+
+				<div class="tab" id="tablist">
+					<script>
+						let height = screen.height;
+						document.getElementById("tablist").style.height =  height;
+					</script>
+				  	<button class="tablinks active" onclick="openPage(event, 'Main')">Home</button>
+				  	<button class="tablinks" onclick="openPage(event, 'Microsoft')">Microsoft Apps</button>
+				  	<button class="tablinks" onclick="openPage(event, 'Classrooms')">Classroom Apps</button>
+				</div>
+
+				<div id="Main" class="tabcontent">
+				 	<h3>Notifications</h3>
+				  	<div class="notifcontainer">
+				  		<div class="triggerbg1" id="triggerbg1" style="display:none;">
+							<img class="spinnerimg" src="resource/image/logo-pdf.png">
+						</div>
+			  			<table>
+			  		  		<tr>
+			  		    		<th>
+			  		    			<p>Remote Access&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</p>
+			  		    		</th>
+			  		    		<th>
+			  		    			<button class="btn" id="triggerbtn1">Set Up Citrix Workspace</button>
+			  		    		</th>
+			  		    	</tr>
+			  		    </table>
+				  	</div>
+
+				  	<h3>Popular Websites</h3>
+				  	<br>
+				  	<br>
+				  	<button class="appbtn canvabtn" id="triggerbtn2"><img src="resource/image/logo-canva-btn.png" class="appbtnimg"><br><br>Canva</button>
+				  	<div class="triggerbg2" id="triggerbg2" style="display:none;">
+						<img class="spinnerimg" id="triggerbgicon2" src="resource/image/logo-canva-btn.png">
+					</div>
+
+					<button class="appbtn outlookbtn" id="triggerbtn3"><img src="resource/image/logo-msoutlook-btn.png" class="appbtnimg"><br><br>Outlook</button>
+				  	<div class="triggerbg3" id="triggerbg3" style="display:none;">
+						<img class="spinnerimg" id="triggerbgicon3" src="resource/image/logo-msoutlook-btn.png">
+					</div>
+				</div>
+
+				<div id="Microsoft" class="tabcontent" style="display: none;">
+				  	<h3>Microsoft Apps</h3>
+				  	<p>Work in Progress</p>
+				</div>
+
+				<div id="Classrooms" class="tabcontent" style="display: none;">
+				  	<h3>Classroom Apps</h3>
+				  	<p>Work in Progress</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var btnid1 = document.getElementById("triggerbtn1")
+			var btnid2 = document.getElementById("triggerbtn2")
+			var btnid3 = document.getElementById("triggerbtn3")
+
+			function triggerbground1() {
+			   document.getElementById("triggerbg1").style.cursor = "progress";
+			   var overlay = document.getElementById("triggerbg1");
+			   overlay.style.display = "block";
+			   overlay.classList.add("tweenspinzoomback");
+
+			   	sleep(2000).then(() => {
+			    	overlay.classList.add("setbgwhite");
+
+			    	sleep(500).then(() => {
+			    	 	location.replace("https://www.dpcdsb.org/Documents/Dufferin-Peel%20Student%20Access%20From%20Personal%20Device.pdf");
+			    	 });
+			    });
+			}
+
+			function triggerbground2() {
+			   document.getElementById("triggerbg1").style.cursor = "progress";
+			   var overlay = document.getElementById("triggerbg2");
+			   var img = document.getElementById("triggerbgicon2");
+			   overlay.style.display = "block";
+			   overlay.classList.add("tweenspinzoomback");
+
+			   	sleep(2000).then(() => {
+			    	overlay.classList.add("setbgwhite");
+			    	img.classList.add("setimgwhite");
+
+			    	sleep(500).then(() => {
+			    	 	location.replace("https://canva.com/");
+			    	 });
+			    });
+			}
+
+			function triggerbground3() {
+			   document.getElementById("triggerbg1").style.cursor = "progress";
+			   var overlay = document.getElementById("triggerbg3");
+			   var img = document.getElementById("triggerbgicon3");
+			   overlay.style.display = "block";
+			   overlay.classList.add("tweenspinzoomback");
+
+			   	sleep(2000).then(() => {
+			    	overlay.classList.add("setbgwhite");
+			    	img.classList.add("setimgwhite");
+
+			    	sleep(500).then(() => {
+			    	 	location.replace("https://outlook.office365.com");
+			    	 });
+			    });
+			}
+
+			btnid1.addEventListener("click", triggerbground1)
+			btnid2.addEventListener("click", triggerbground2)
+			btnid3.addEventListener("click", triggerbground3)
+		</script>
+	</body>
+</html>
